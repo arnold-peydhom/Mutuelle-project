@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css-->
+    <link rel="stylesheet" href="{%static 'crud/css/utilisateur.css' %}">
+   <!--font-awesome-->
+    <link rel="stylesheet" href="{%static 'crud/fontawesome-free-6.0.0-beta3-web/css/all.css'%}">
+    <link rel="stylesheet" href="{%static 'crud/fontawesome-free-6.0.0-beta3-web/css/all.min.css'%}">
+    <title>Liste_des_Utilisateurs</title>
+</head>
+<body>
+    <script src="{%static 'crud/js/home.js' %}"></script>
+
+    <div class="titlebar">
+        <p class="titlename">Mon Association</p>
+        <img src="{%static 'crud/assets/img6.jpg' %}" class="img" width="100px" height="100px"/>
+    </div>
+
+    <div class="header">
+        <p class="name1">MAFOPRO</p>
+        <em><p class="name2">Mutuelle des agents de la formation professionnel</p></em>
+    </div>
+
+    <div class="coordonnes">
+        <img src="{%static 'crud/assets/img2.png' %}" class="img2" width="40px" height="40px"/>
+        <em><p class="statut">En ligne</p></em>
+        <a href="#"><i class="fas fa-sign-out-alt" id="signout" title="deconnexion"></i></a>
+    </div>
+
+    <div class="bigrow">
+        <div class="profi">
+          <a href="{%url 'home' %}"><i class="fa fa-chevron-left" aria-hidden="true" id="chevron"></i></a>
+          <i class="fa fa-download" aria-hidden="true" title="Telecharger le fichier PDF" id="download"></i>
+            <marquee><em><p class="profil">Liste des Utilisateurs</p></em></marquee>
+            <!--tableau-->
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th class="w">Photos</th>
+                    <th class="w">Noms</th>
+                    <th class="w">Prenoms</th>
+                    <th class="w">Sexe</th>
+                    <th class="w">Pays</th>
+                    <th class="w">Ville</th>
+                    <th class="w">Date_Adhesion</th>
+                    <th class="w">Statut</th>
+                    <th class="w">E-mail</th>
+                    <th class="w">Phone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img src="{%static 'crud/assets/img2.png' %}" class ="i"width="50px" height="50px"></td>
+                    <td>GABISSI PEYDHOM</td>
+                    <td>Arnold Landry</td>
+                    <td>Masculin</td>
+                    <td>Cameroun</td>
+                    <td>Douala</td>
+                    <td>13/04/2023</td>
+                    <td>Tresorier</td>
+                    <td><a href="mailto:arnoldpeydhom276@gmail.com">arnoldpeydhom276@gmail.com</a></td>
+                    <td>+237 693-181-937</td>
+                  </tr>
+
+                  <tr>
+                    <td><img src="{%static 'crud/assets/img6.jpg' %}" class ="i"width="50px" height="50px"></td>
+                    <td>GABISSI PEYDHOM</td>
+                    <td>Arnold Landry</td>
+                    <td>Masculin</td>
+                    <td>Cameroun</td>
+                    <td>Douala</td>
+                    <td>13/04/2023</td>
+                    <td>Tresorier</td>
+                    <td><a href="mailto:arnoldpeydhom276@gmail.com">arnoldpeydhom276@gmail.com</a></td>
+                    <td>+237 693-181-937</td>
+                  </tr>
+
+                  <tr>
+                    <td><img src="{%static 'crud/assets/img2.png' %}" class ="i"width="50px" height="50px"></td>
+                    <td>GABISSI PEYDHOM</td>
+                    <td>Arnold Landry</td>
+                    <td>Masculin</td>
+                    <td>Cameroun</td>
+                    <td>Douala</td>
+                    <td>13/04/2023</td>
+                    <td>Tresorier</td>
+                    <td><a href="mailto:arnoldpeydhom276@gmail.com">arnoldpeydhom276@gmail.com</a></td>
+                    <td>+237 693-181-937</td>
+                  </tr>
+
+                  <tr>
+                    <td><img src="{%static 'crud/assets/img6.jpg' %}" class ="i"width="50px" height="50px"></td>
+                    <td>GABISSI PEYDHOM</td>
+                    <td>Arnold Landry</td>
+                    <td>Masculin</td>
+                    <td>Cameroun</td>
+                    <td>Douala</td>
+                    <td>13/04/2023</td>
+                    <td>Tresorier</td>
+                    <td><a href="mailto:arnoldpeydhom276@gmail.com">arnoldpeydhom276@gmail.com</a></td>
+                    <td>+237 693-181-937</td>
+                  </tr>
+
+                  <tr>
+                    <td><img src="{%static 'crud/assets/img2.png' %}" class ="i"width="50px" height="50px"></td>
+                    <td>GABISSI PEYDHOM</td>
+                    <td>Arnold Landry</td>
+                    <td>Masculin</td>
+                    <td>Cameroun</td>
+                    <td>Douala</td>
+                    <td>13/04/2023</td>
+                    <td>Tresorier</td>
+                    <td><a href="mailto:arnoldpeydhom276@gmail.com">arnoldpeydhom276@gmail.com</a></td>
+                    <td>+237 693-181-937</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!--fin tableau-->
+        </div>
+        
+    </div>
+</body>
+</html>

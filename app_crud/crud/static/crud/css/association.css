@@ -1,0 +1,161 @@
+*{
+    margin: 0px;
+    background-color: rgb(170, 189, 190);
+}
+.titlebar{
+    width: 200px;
+    height: 649px;
+    background-color: rgba(45, 88, 90, 0.596);
+    box-shadow: 2px 2px 12px 12px rgba(32, 44, 48, 0.3);
+
+}
+.titlename{
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    background:none;
+    position: relative;
+    top:270px;
+    width: 450px;
+    right: 130px;
+    transform: rotate(-90deg);
+    background: linear-gradient(270deg,#ffffff,rgb(238, 184, 113));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+}
+
+.img{
+    margin-left: 250px;
+    margin-top: -50px;
+    border-radius: 100px;
+}
+.header{
+    position: relative;
+    width: 600px;
+    left: 380px;
+    margin-top: -605px;
+    font-size: 25px;
+}
+.name1{
+    position: relative;
+    top:-10px;
+    font-weight: bold;
+}
+.name2{
+    font-size: 20px;
+}
+.coordonnes{
+    position: relative;
+    width: 100px;
+    background: none;
+    left: 1240px;
+    top:-60px;
+}
+.img2{
+    border-radius: 40px;
+}
+.statut{
+    background: none;
+    color: green;
+    font-weight: bold;
+    margin-left: -8px;
+}
+#signout{
+    position: relative;
+    left: 60px;
+    font-size: 18px;
+    top:-50px;
+    cursor: pointer;
+}
+#signout:hover{
+    color: brown;
+}
+
+.bigrow{
+    width:1070px;
+    height: 500px;
+    background-color: rgb(245, 244, 243);
+    margin-top: -28px;
+    position: relative;
+    left: 250px;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.profi{
+    background: none;
+    height: 45px;
+    width: 300px;
+    position: relative;
+    left: 750px;
+    top:20px;
+}
+
+.profil{
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+marquee{
+    background: none;
+}
+
+.contenu{
+    background: none;
+    position: relative;
+    width: 800px;
+    margin-top:90px;
+    height: 380px;
+    margin-left:-200px;
+}
+.n{
+    font-size: 21px;
+    background: none;
+    margin-top: 27px;
+    font-weight: bold;
+}
+.logo{
+    margin-top: -57px;
+    position: relative;
+    left: 350px;
+    border-radius: 80px;
+}
+
+.infos{
+    background: none;
+    margin-left: 350px;
+    margin-top: -30px;
+}
+
+#infos2{
+    position: relative;
+    top:-15px;
+}
+
+
+#chevron{
+    position: relative;
+    right: 720px;
+    top:0px;
+    background: none;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #chevron:hover{
+    color:#1c87c9;
+  }
+  a{
+    background: none;
+  }
+
+  .img5{
+    margin-top: 200px;
+    position: relative;
+    bottom: 110px;
+    left: -20px;
+    top:-50px;
+    border-radius: 270px;
+  }

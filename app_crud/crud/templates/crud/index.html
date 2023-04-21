@@ -1,0 +1,64 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!---bootstrap-->
+    <link rel="stylesheet" href="{%static 'crud/node_modules/bootstrap/dist/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{%static 'crud/node_modules/bootstrap/dist/css/bootstrap.min.css'%}">
+
+        <!--css-->
+    <link rel="stylesheet" href="{%static 'crud/css/index.css' %}">
+        <!--font-awesome-->
+    <link rel="stylesheet" href="{%static 'crud/fontawesome-free-6.0.0-beta3-web/css/all.css'%}">
+    <link rel="stylesheet" href="{%static 'crud/fontawesome-free-6.0.0-beta3-web/css/all.min.css'%}">
+        <!--google fonts-->
+        <!--nav bar-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap" rel="stylesheet">
+    <!--titre-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:ital@1&display=swap" rel="stylesheet">
+    <!--text1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil</title>
+</head>
+<body>
+    <header class="nav">
+        <p class="titre">My Mutuelle OnLine</p>
+        <ul>
+            <li><a href="{%url 'index' %}" class="menu">Home</a></li>
+            <li><a href="#" class="menu">Contact</a></li>
+            <li><a href="{%url 'support' %}" class="menu">Support</a></li>
+            <li><a href="{%url 'connexion' %}" class="menu">Connexion</a></li>
+        </ul>
+    </header>
+
+    <section class="cadre">
+        <p class="text1"><span class="text2">La retraite </span> de demain <br>se prepare aujourdhui.Qu'est ce que t'attend ?</p>
+        <button type="submit" class="button">Get Started</button>
+    </section>
+
+    <footer class="footer">
+        <div class="coordonnees">
+            <p class="c1"> <i class="fab fa-phone"></i> (+237) 693-181-937</p>
+            <p class="c1">  <i class="fab fa-envelope"></i> (+237) arnoldpeydhom276@gmail.com</p>
+        </div>
+
+        <div class="coordonnees">
+            <i class="fab fa-facebook-f" id="icones"></i>
+            <i class="fab fa-twitter" id="icones"></i>
+            <i class="fab fa-google" id="icones"></i>
+            <i class="fab fa-linkedin-in" id="icones"></i>
+        </div>
+    </footer>
+</body>
+</html>

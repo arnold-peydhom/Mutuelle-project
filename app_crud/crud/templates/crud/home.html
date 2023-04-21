@@ -1,0 +1,144 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css-->
+    <link rel="stylesheet" href="{%static 'crud/css/home.css' %}">
+   <!--font-awesome-->
+    <link rel="stylesheet" href="{%static 'crud/fontawesome-free-6.0.0-beta3-web/css/all.css'%}">
+    <link rel="stylesheet" href="{%static 'crud/fontawesome-free-6.0.0-beta3-web/css/all.min.css'%}">
+    <title>home|membre</title>
+</head>
+<body>
+    <script src="{%static 'crud/js/home.js' %}"></script>
+
+    <div class="titlebar">
+        <p class="titlename">Mon Association</p>
+        <img src="{%static 'crud/assets/img6.jpg' %}" class="img" width="100px" height="100px"/>
+    </div>
+
+    <div class="header">
+        <p class="name1">MAFOPRO</p>
+        <em><p class="name2">Mutuelle des agents de la formation professionnel</p></em>
+    </div>
+
+    <div class="coordonnes">
+        <img src="{%static 'crud/assets/img2.png' %}" class="img2" width="40px" height="40px"/>
+        <em><p class="statut">En ligne</p></em>
+        <a href="#"><i class="fas fa-sign-out-alt" id="signout" title="deconnexion"></i></a>
+    </div>
+
+    <div class="bigrow">
+      
+        <div class="row1">
+            <div class="row2">
+                <i class="fa fa-users fa-flip" aria-hidden="true" id="user"></i>
+                <p class="textrow">Votre Association</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+            <a href="{%url 'association' %}" class="lien">Click here</a>
+        </div>
+
+        <div class="row1">
+            <div class="row2">
+                <i class="fa-solid fa-user fa-beat" id="user"></i>
+                <p class="textrow">Utilisateurs</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+            <a href="{%url 'utilisateur' %}" class="lien">Click here</a>
+        </div>
+
+        <div class="row1">
+            <div class="row2">
+                <i class="fa-brands fa-btc fa-beat-fade" id="user"></i>
+                <p class="textrow">Cotisation</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+            <a href="{%url 'cotisation' %}" class="lien">Click here</a>
+        </div>
+        
+        <div class="row1" id="row1" title="vous n'avez pas acces a cette fonctionnalitee">
+            <div class="row2">
+                <i class="fas fa-tachometer-alt fa-spin" id="user"></i>
+                <p class="textrow">Tableau de bord</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+        </div>
+        
+        <div class="row1" id="row1">
+            <div class="row2">
+                <i class="fa-solid fa-note-sticky fa-flip" id="user"></i>
+                <p class="textrow">Reporting</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+            <a href="{%url 'reporting' %}" class="lien">Click here</a>
+        </div>
+        
+        <div class="row1" id="row1">
+            <div class="row2">
+                <i class="fa-solid fa-wallet fa-fade" id="user"></i>
+                <p class="textrow">Prestation |Evenements</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+            <a href="{%url 'prestation' %}" class="lien">Click here</a>
+        </div>
+
+        <div class="row1" id="row2">
+            <div class="row2">
+                <i class="fa-solid fa-user fa-spin fa-spin-reverse" id="user"></i>
+                <p class="textrow">Annonces</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+            <a href="{%url 'annonce' %}" class="lien">Click here</a>
+        </div>
+        
+        <div class="row1" id="row2" title="vous n'avez pas acces a cette fonctionnalitee">
+            <div class="row2">
+                <i class="fas fa-cog fa-spin" aria-hidden="true" id="user"></i>
+                <p class="textrow">Configuration</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+        </div>
+        
+        <div class="row1" id="row2" title="vous n'avez pas acces a cette fonctionnalitee">
+            <div class="row2">
+                <i class="fas fa-newspaper fa-beat-fade" id="user"></i>
+                <p class="textrow">Journal des Operations</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+        </div>
+        
+        <div class="row1" id="row3">
+            <div class="row2">
+                <i class="fa-solid fa-list fa-flip" id="user"></i>
+                <p class="textrow">Consulter les emprunts</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+            <a href="{%url 'consulter_emp' %}" class="lien">Click here</a>
+        </div>
+        
+        <div class="row1" id="row3">
+            <div class="row2">
+                <i class="fa-solid fa-cash-register fa-beat" aria-hidden="true" id="user"></i>
+                <p class="textrow">Enregistrer un remboursement</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+            <a href="{%url 'enregistrement_remb' %}" class="lien">Click here</a>
+        </div>
+        
+        <div class="row1" id="row3">
+            <div class="row2">
+                <i class="fa-solid fa-credit-card fa-beat-fade" id="user"></i>
+                <p class="textrow">Demander un emprunt</p>
+            </div>
+            <p class="textrow2">lorem ipsum dolor set amet lorem ipsum dolor set amet</p>
+            <a href="{%url 'demander_emp' %}" class="lien">Click here</a>
+        </div>
+        
+    </div>
+</body>
+</html>
