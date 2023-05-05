@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from crud.models import Users
+from crud.models import Mutuelle
 
 def connexion(request):
     return render(request, 'crud/connexion.html')
@@ -13,7 +15,8 @@ def annonce(request):
     return render(request, 'crud/annonces.html')
 
 def association(request):
-    return render(request, 'crud/association.html')
+    association = Mutuelle.objects.all()
+    return render(request, 'crud/association.html', context={"assoc":association})
 
 def cotisation(request):
     return render(request, 'crud/cotisation.html')
@@ -37,4 +40,5 @@ def reporting(request):
     return render(request, 'crud/reporting.html')
 
 def utilisateur(request):
-    return render(request, 'crud/utilisateur.html')
+    users = Users.objects.all()
+    return render(request, 'crud/utilisateur.html',context={"users": users})  

@@ -18,12 +18,13 @@
     
     <div class="titlebar">
         <p class="titlename">Mon Association</p>
-        <img src="{%static 'crud/assets/img6.jpg' %}" class="img" width="100px" height="100px"/>
+        {% for assocs in assoc %}
+        <img src={{assocs.logo}} class="img" width="100px" height="100px"/>
     </div>
 
     <div class="header">
-        <p class="name1">MAFOPRO</p>
-        <em><p class="name2">Mutuelle des agents de la formation professionnel</p></em>
+        <p class="name1">{{assocs.abbreviation}}</p>
+        <em><p class="name2">{{assocs.nom_association}}</p></em>
     </div>
 
     <div class="coordonnes">
@@ -39,13 +40,14 @@
           
         </div>
             <div class="contenu">
-                <p class="n">Logo :</p> <img src="{%static 'crud/assets/img6.jpg' %}" class="logo" width="80px" height="80px"/><br>
-                <p class="n">Abreviation :</p> <p class="infos">MAFOPRO</p><br>
-                <p class="n">Nom de l'association :</p> <p class="infos">Mutuelle des agents de la formation professionnel</p><br>
-                <p class="n">Date de creation :</p> <p class="infos">07/04/2023</p><br>
-                <p class="n">Statut de l'association :</p> <a href="#" class="infos" id="infos2">https://statut_get.org</a><br>
-                <p class="n">Reglement interieur :</p> <a href="#" class="infos" id="infos2">https://statut_get.org</a>
+                <p class="n">Logo :</p> <img src={{assocs.logo}} class="logo" width="80px" height="80px"/><br>
+                <p class="n">Abreviation :</p> <p class="infos">{{assocs.abbreviation}}</p><br>
+                <p class="n">Nom de l'association :</p> <p class="infos">{{assocs.nom_association}}</p><br>
+                <p class="n">Date de creation :</p> <p class="infos">{{assocs.date_creation}}</p><br>
+                <p class="n">Statut de l'association :</p> <a href="#" class="infos" id="infos2">{{assocs.statut_association}}</a><br>
+                <p class="n">Reglement interieur :</p> <a href="#" class="infos" id="infos2">{{assocs.reglement_interieur}}</a>
             </div>
+            {% endfor %}
 
             <img src="{%static 'crud/assets/img5.webp' %}" class="img5" width="270px" height="270px">      
     </div>

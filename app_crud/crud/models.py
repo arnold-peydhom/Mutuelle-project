@@ -14,7 +14,7 @@ class Users(models.Model):
         ("YDE","Yaounde"),("DLA","Douala"),("GAR","Garoua"),("MAR","Maroua"),("BER","Bertoua"),("EBOL","Ebolowa"),("BUEA","Buea"),("NGA","Ngaoundere"),("BAM","Bamenda"),("BAF","Bafoussam"),
     ]
     STATUT = [
-        ("TRES","TRESORIER"),("SECR","SECRETAIRE"),("ASSIS TRES","ASSISTANT TRESORIER"),("REPORT","REPORTEUR"),
+        ("TRESORIER","TRESORIER"),("SECRETAIRE","SECRETAIRE"),("ASSISTANT TRESORIER","ASSISTANT TRESORIER"),("REPORTEUR","REPORTEUR"),
     ]    
     id_users = models.AutoField(primary_key=True,blank=False)
     photo = models.ImageField(blank=True)
@@ -29,17 +29,22 @@ class Users(models.Model):
     phone = models.IntegerField( blank=False)
     username = models.fields.CharField(max_length=20, blank=False)
     password = models.fields.CharField(max_length=20, blank=False)
+    def __str__(self):
+        return f'{self.noms}'
+    
     pass
   
     
 class Demande_Emprunt(models.Model):
-    users = models.ForeignKey(Users,on_delete=models.CASCADE)
+    users = models.ForeignKey(Users,on_delete=models.CASCADE,blank=True)
     id_demande = models.AutoField(primary_key=True,blank=False)
     beneficiaire = models.fields.CharField(max_length=30,blank=False)
     montant = models.FloatField(blank=False)
     interet = models.FloatField(blank=False)
     date_remboursement = models.DateField(blank=False)
     motif = models.fields.CharField(max_length=80,blank=False)
+    def __str__(self):
+        return f'{self.beneficiaire}'
     
    
 class Preuve(models.Model):
@@ -57,14 +62,20 @@ class Preuve(models.Model):
 class Preuv_Remb_Empr(Preuve):
     reste = models.FloatField(blank=False)
     interet = models.FloatField(blank = False)
+    def __str__(self):
+        return f'{self.justificatifs}'
   
     
 class Preuv_Cotisation(Preuve):
     nature_cotisation = models.fields.CharField(max_length=20,blank=False)
+    def __str__(self):
+        return f'{self.justificatifs}'
     
 
 class Preuv_Cotis_Sinistre(Preuve):
     nature_sinistre = models.fields.CharField(max_length=20,blank=False)
+    def __str__(self):
+        return f'{self.justificatifs}'
     
     
 class Annonces(models.Model):
@@ -74,6 +85,8 @@ class Annonces(models.Model):
     libelle = models.fields.CharField(max_length=300,blank=False)
     destinataire = models.fields.CharField(max_length=30,blank=False)
     date = models.DateField(blank=False)
+    def __str__(self):
+        return f'{self.libelle}'
     
     
 class Cotisation_Effective(models.Model):
@@ -97,6 +110,8 @@ class Cotisation_Sinistre(Cotisation_Effective):
     ]
     type_sinistre = models.fields.CharField(max_length=60,blank=True,choices=AUTRE)
     autre_type = models.fields.CharField(max_length=60,blank=True)
+    def __str__(self):
+        return f'{self.nom_cotisant}'
     
 class Autre_Cotisation(Cotisation_Effective):
     AUTRE = [
@@ -105,6 +120,8 @@ class Autre_Cotisation(Cotisation_Effective):
     type_cotisation = models.fields.CharField(max_length=60,blank=True,choices=AUTRE)
     autre_type = models.fields.CharField(max_length=60,blank=True)
     interet = models.FloatField(blank=False)
+    def __str__(self):
+        return f'{self.nom_cotisant}'
     
     
 class Infos(models.Model):
@@ -117,6 +134,8 @@ class Infos_Emprunt(Infos):
     raison = models.fields.CharField(max_length=50,blank=False)
     date_remboursement = models.DateField(blank=False)
     interet  = models.FloatField(blank=False)
+    def __str__(self):
+        return f'{self.beneficiaire}'
     
 class Infos_Sinistre(Infos):
     AUTRE = [
@@ -127,6 +146,8 @@ class Infos_Sinistre(Infos):
     ]
     type_sinistre = models.fields.CharField(max_length=30,blank=False,choices=AUTRE)
     autre_type = models.fields.CharField(max_length=60,blank=True)
+    def __str__(self):
+        return f'{self.beneficiaire}'
     
 class Infos_Cotisation(Infos):
     AUTRE = [
@@ -137,6 +158,8 @@ class Infos_Cotisation(Infos):
     ]
     type_cotisation = models.fields.CharField(max_length=30,blank=True,choices=AUTRE)
     autre_type = models.fields.CharField(max_length=60,blank=True)
+    def __str__(self):
+        return f'{self.beneficiaire}'
 
 
 class Mutuelle(models.Model):
@@ -147,6 +170,8 @@ class Mutuelle(models.Model):
     date_creation = models.DateField(blank=False)
     statut_association = models.fields.CharField(max_length=100,blank=False)
     reglement_interieur = models.fields.CharField(max_length=20,blank=False)
+    def __str__(self):
+        return f'{self.nom_association}'
     
     
 class Enregistrement_Emprunt(models.Model):
@@ -158,3 +183,5 @@ class Enregistrement_Emprunt(models.Model):
     interet = models.FloatField(blank=False)
     date_remboursement = models.DateField(blank=False)
     raison_emprunt = models.fields.CharField(max_length=300,blank=False)
+    def __str__(self):
+        return f'{self.emprunteur}'

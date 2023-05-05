@@ -54,70 +54,20 @@
                   </tr>
                 </thead>
                 <tbody>
+                  {% for User in users %}
                   <tr>
-                    <td><img src="{%static 'crud/assets/img2.png' %}" class ="i"width="50px" height="50px"></td>
-                    <td>GABISSI PEYDHOM</td>
-                    <td>Arnold Landry</td>
-                    <td>Masculin</td>
-                    <td>Cameroun</td>
-                    <td>Douala</td>
-                    <td>13/04/2023</td>
-                    <td>Tresorier</td>
-                    <td><a href="mailto:arnoldpeydhom276@gmail.com">arnoldpeydhom276@gmail.com</a></td>
-                    <td>+237 693-181-937</td>
+                    <td><img src={{User.photo}} class ="i"width="50px" height="50px"></td>
+                    <td>{{User.noms}}</td>
+                    <td>{{User.prenoms}}</td>
+                    <td>{{User.sexe}}</td>
+                    <td>{{User.pays}}</td>
+                    <td>{{User.ville}}</td>
+                    <td>{{User.date_creation}}</td>
+                    <td>{{User.statut}}</td>
+                    <td><a href="mailto:arnoldpeydhom276@gmail.com">{{User.e_mail}}</a></td>
+                    <td>{{User.phone}}</td>
                   </tr>
-
-                  <tr>
-                    <td><img src="{%static 'crud/assets/img6.jpg' %}" class ="i"width="50px" height="50px"></td>
-                    <td>GABISSI PEYDHOM</td>
-                    <td>Arnold Landry</td>
-                    <td>Masculin</td>
-                    <td>Cameroun</td>
-                    <td>Douala</td>
-                    <td>13/04/2023</td>
-                    <td>Tresorier</td>
-                    <td><a href="mailto:arnoldpeydhom276@gmail.com">arnoldpeydhom276@gmail.com</a></td>
-                    <td>+237 693-181-937</td>
-                  </tr>
-
-                  <tr>
-                    <td><img src="{%static 'crud/assets/img2.png' %}" class ="i"width="50px" height="50px"></td>
-                    <td>GABISSI PEYDHOM</td>
-                    <td>Arnold Landry</td>
-                    <td>Masculin</td>
-                    <td>Cameroun</td>
-                    <td>Douala</td>
-                    <td>13/04/2023</td>
-                    <td>Tresorier</td>
-                    <td><a href="mailto:arnoldpeydhom276@gmail.com">arnoldpeydhom276@gmail.com</a></td>
-                    <td>+237 693-181-937</td>
-                  </tr>
-
-                  <tr>
-                    <td><img src="{%static 'crud/assets/img6.jpg' %}" class ="i"width="50px" height="50px"></td>
-                    <td>GABISSI PEYDHOM</td>
-                    <td>Arnold Landry</td>
-                    <td>Masculin</td>
-                    <td>Cameroun</td>
-                    <td>Douala</td>
-                    <td>13/04/2023</td>
-                    <td>Tresorier</td>
-                    <td><a href="mailto:arnoldpeydhom276@gmail.com">arnoldpeydhom276@gmail.com</a></td>
-                    <td>+237 693-181-937</td>
-                  </tr>
-
-                  <tr>
-                    <td><img src="{%static 'crud/assets/img2.png' %}" class ="i"width="50px" height="50px"></td>
-                    <td>GABISSI PEYDHOM</td>
-                    <td>Arnold Landry</td>
-                    <td>Masculin</td>
-                    <td>Cameroun</td>
-                    <td>Douala</td>
-                    <td>13/04/2023</td>
-                    <td>Tresorier</td>
-                    <td><a href="mailto:arnoldpeydhom276@gmail.com">arnoldpeydhom276@gmail.com</a></td>
-                    <td>+237 693-181-937</td>
-                  </tr>
+                  {% endfor %}
                 </tbody>
               </table>
             <!--fin tableau-->
