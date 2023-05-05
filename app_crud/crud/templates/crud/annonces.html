@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--css-->
     <link rel="stylesheet" href="{%static 'crud/css/annonces.css' %}">
-        <!--font-awesome-->
+   <!--font-awesome-->
     <link rel="stylesheet" href="{%static 'crud/fontawesome-free-6.0.0-beta3-web/css/all.css'%}">
     <link rel="stylesheet" href="{%static 'crud/fontawesome-free-6.0.0-beta3-web/css/all.min.css'%}">
     <title>Annonces</title>
@@ -18,7 +18,7 @@
     
     <div class="titlebar">
         <p class="titlename">Mon Association</p>
-        <img src="{%static 'crud/assets/img6.jpg' %}" class="img" width="100px" height="100px"/>
+        <img src="../assets/img6.jpg" class="img" width="100px" height="100px"/>
     </div>
 
     <div class="header">
@@ -27,13 +27,19 @@
     </div>
 
     <div class="coordonnes">
-        <img src="{%static 'crud/assets/img2.png' %}" class="img2" width="40px" height="40px"/>
+        <img src="../assets/img2.png" class="img2" width="40px" height="40px"/>
         <em><p class="statut">En ligne</p></em>
         <a href="#"><i class="fas fa-sign-out-alt" id="signout" title="deconnexion"></i></a>
     </div>
 
     <div class="bigrow">
-        
+        <div class="annonce">
+            <p class="ann1">id</p><br>
+            <p class="ann1">object</p><br>
+            <p class="ann1">libelle</p><br>
+            <p class="ann1">destinataire</p><br>
+            <p class="ann1">date</p>
+        </div>
     </div>
 </body>
 </html>

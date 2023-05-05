@@ -25,7 +25,7 @@ class Users(models.Model):
     ville = models.fields.CharField(max_length=20, blank=False, choices=VILLE)
     date_creation = models.DateField( blank=False)
     statut = models.fields.CharField(max_length=30, blank=False, choices=STATUT)
-    e_mail = models.fields.CharField(max_length=20, blank=False)
+    e_mail = models.fields.CharField(max_length=40, blank=False)
     phone = models.IntegerField( blank=False)
     username = models.fields.CharField(max_length=20, blank=False)
     password = models.fields.CharField(max_length=20, blank=False)
@@ -36,7 +36,7 @@ class Users(models.Model):
   
     
 class Demande_Emprunt(models.Model):
-    users = models.ForeignKey(Users,on_delete=models.CASCADE,blank=True)
+    users = models.ForeignKey(Users,on_delete=models.CASCADE,blank=True, null=True)
     id_demande = models.AutoField(primary_key=True,blank=False)
     beneficiaire = models.fields.CharField(max_length=30,blank=False)
     montant = models.FloatField(blank=False)
@@ -48,7 +48,7 @@ class Demande_Emprunt(models.Model):
     
    
 class Preuve(models.Model):
-    users = models.ForeignKey(Users,on_delete=models.CASCADE)
+    users = models.ForeignKey(Users,on_delete=models.CASCADE, null=True)
     id_preuve = models.AutoField(primary_key=True,blank=False)
     noms_membre = models.fields.CharField(max_length=50,blank=False)
     montant_attendu = models.FloatField(blank=False)
@@ -59,7 +59,7 @@ class Preuve(models.Model):
         abstract = True
  
         
-class Preuv_Remb_Empr(Preuve):
+class PreuvRembEmpr(Preuve):
     reste = models.FloatField(blank=False)
     interet = models.FloatField(blank = False)
     def __str__(self):

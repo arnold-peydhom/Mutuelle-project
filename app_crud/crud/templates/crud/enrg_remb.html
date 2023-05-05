@@ -33,35 +33,25 @@
     </div>
 
     <div class="bigrow">
-        <div class="profi">
-            <a href="{%url 'home' %}"><i class="fa fa-chevron-left" aria-hidden="true" id="chevron"></i></a>
-              <marquee><em><p class="profil">Formulaire de demande d'emprunts</p></em></marquee>
-
-              <div class="intitules">
-                <p class="intitule">Code *</p>
-                <p class="intitule">Noms-membre *</p>
-                <p class="intitule">Montant-attendu *</p>
-                <p class="intitule">Montant verse *</p>
-                <p class="intitule">Interet *</p>
-                <p class="intitule">Reste *</p>
-                <p class="intitule">Statut *</p>
-                <p class="intitule">Raison *</p>
-                <p class="intitule">Date-Remboursement *</p>
-              </div>
-
-              <div class="contenu">
-                <input type="text" class="cont"><br>
-                <input type="text" class="cont"><br>
-                <input type="text" class="cont"><br>
-                <input type="text" class="cont"><br>
-                <input type="text" class="cont"><br>
-                <input type="text" class="cont"><br>
-                <input type="text" class="cont"><br>
-                <textarea cols="20" rows="3" class="cont" id="raison"></textarea><br>
-                <input type="date" class="cont" id="date"><br>
-              </div>
-
-              <img src="{%static 'crud/assets/img4.webp' %}" class="img4" width="270px" height="270px">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+                <div>
+                    <label class="label" for="{{field.id_for_label}}">{{field.label}}:</label>
+                    {% if field.name == "date" %}
+                        <input type="date" name="{{field.name}}" class="cont">
+                    {% else %}
+                        {{field}}
+                    {% endif %}
+                    <div>
+                        <small>{{field.errors}}</small>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="field">
+                <button  type="submit">Enregistrer</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>

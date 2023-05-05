@@ -37,25 +37,14 @@
             <a href="{%url 'home' %}"><i class="fa fa-chevron-left" aria-hidden="true" id="chevron"></i></a>
               <marquee><em><p class="profil">Formulaire de demande d'emprunts</p></em></marquee>
 
-              <div class="intitules">
-                <p class="intitule">Beneficiaire *</p>
-                <p class="intitule">Montant *</p>
-                <p class="intitule">Date-Sollicite *</p>
-                <p class="intitule">Raison *</p>
-                <p class="intitule">Date-Remboursement *</p>
-              </div>
-
-              <div class="contenu">
-                <select class="cont">
-                    <option></option>
-                    <option>peydhom</option>
-                    <option>arnold</option>
-                </select><br>
-                <input type="text" class="cont"><br>
-                <input type="date" class="cont"><br>
-                <textarea cols="20" rows="3" class="cont" id="raison"></textarea><br>
-                <input type="date" class="cont" id="date">
-              </div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <label for="{{field.id_for_label}}">{{field.label}}</label>
+                        {{field}}
+                    {% endfor %}
+                    <button type="submit">Enregistrer</button>
+                </form>
 
               <img src="{%static 'crud/assets/img4.webp' %}" class="img4" width="270px" height="270px">
     </div>

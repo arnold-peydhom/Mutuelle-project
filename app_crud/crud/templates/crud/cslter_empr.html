@@ -41,32 +41,29 @@
               <table class="table">
                   <thead>
                     <tr>
-                      <th class="w">Code</th>
+                      <th class="w">id</th>
                       <th class="w">Beneficiare</th>
-                      <th class="w">Raison</th>
                       <th class="w">Net-attendu</th>
                       <th class="w">Net-verse</th>
                       <th class="w">Reste</th>
                       <th class="w">Interet</th>
-                      <th class="w">Date-emprunt</th>
                       <th class="w">Date-Versement</th>
-                      <th class="w">Statut</th>
+                      <th class="w">raison_emprunt</th>
                     </tr>
                   </thead>
                   <tbody>
+                    {% for emprunt in emprunt %}
                     <tr>
-                      <td>XH4I6ST</td>
-                      <td>GABISSI</td>
-                      <td>Naissance-enfant</td>
-                      <td>250000</td>
-                      <td>200000</td>
-                      <td>50000</td>
-                      <td>0 %</td>
-                      <td>13/03/2023</td>
-                      <td>13/04/2023</td>
-                      <td>Non solde</td>
+                      <td>{{emprunt.id_enregistrement}}</td>
+                      <td>{{emprunt.emprunteur}}</td>
+                      <td>{{emprunt.montant_attendu}}</td>
+                      <td>{{emprunt.montant_verser}}</td>
+                      <td>{{emprunt.reste}}</td>
+                      <td>{{emprunt.interet}}</td>
+                      <td>{{emprunt.date_remboursement}}</td>
+                      <td>{{emprunt.raison_emprunt}}</td>
                     </tr>
-
+                    {% endfor %}
                   </tbody>
                 </table>
               <!--fin tableau-->
