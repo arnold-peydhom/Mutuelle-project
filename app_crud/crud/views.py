@@ -14,7 +14,8 @@ def support(request):
     return render(request, 'crud/support.html')
 
 def annonce(request):
-    return render(request, 'crud/annonces.html')
+    association = Mutuelle.objects.all()
+    return render(request, 'crud/annonces.html', context={"assoc":association})
 
 def association(request):
     association = Mutuelle.objects.all()
@@ -55,8 +56,7 @@ def prestation(request):
 def reporting(request):
     return render(request, 'crud/reporting.html')
 
-def utilisateur(request):
-    
+def utilisateur(request):    
     association = Mutuelle.objects.all()
     users = Users.objects.all()
     return render(request, 'crud/utilisateur.html',context={"users": users, "assoc":association})  
