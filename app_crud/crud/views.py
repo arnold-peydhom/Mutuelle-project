@@ -31,7 +31,8 @@ def enrg_remb(request):
     return render(request, 'crud/enrg_remb.html')
 
 def home(request):
-    return render(request, 'crud/home.html')
+    association = Mutuelle.objects.all()
+    return render(request, 'crud/home.html',context={"assoc":association})
 
 def prestation(request):
     return render(request, 'crud/prestation.html')
